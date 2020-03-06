@@ -1,0 +1,260 @@
+/* style.css */
+
+/* created by Bruce Elgort */
+
+@import url('https://fonts.googleapis.com/css?family=Jura:300,400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+a:link, a:visited, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+body {
+    font-family: 'Jura', sans-serif;
+}
+
+.home-container-1 {
+    background: url(../images/companyslide.png);
+    object-fit: cover;
+    background-position: center;
+    height: 100vh;
+    max-width: 1700px;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 100px auto auto;
+    grid-template-areas: "logo logo nav nav nav nav phone estimates hamburger" ". hero hero hero hero . spartan spartan spartan" ". products products products products badges badges badges badges";
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    top: 0px;
+    left: 0px;
+    opacity: .6;
+    background: #7A90B5;
+}
+
+.home-header-logo {
+    width: 100%;
+    grid-area: logo;
+    text-align: center;
+    line-height: .8;
+}
+
+.home-header-logo h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+}
+
+.precast {
+    font-size: 1.2rem;
+}
+
+.home-nav-main {
+    grid-area: nav;
+    font-size: 1.1rem;
+}
+
+.home-nav-main ul {
+    list-style-type: none;
+}
+
+.home-nav-main ul li {
+    display: inline-block;
+    margin-right: 20px;
+    color: #FFFFFF;
+}
+
+.home-nav-main a:link, .home-nav-main a:visited, .home-nav-main a:active {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.home-nav-main a:hover, .home-nav-main a:focus {
+    text-decoration: underline;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.home-phone {
+    grid-area: phone;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+}
+
+.home-phone a:link, .home-phone a:visited, .home-phone a:active {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.home-phone a:hover, .home-phone a:focus {
+    text-decoration: underline;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.home-estimates {
+    grid-area: estimates;
+    color: #000;
+    background: #FFFFFF;
+    padding: 8px 15px 8px 15px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.home-estimates a:link, .home-estimates a:visited, .home-estimates a:active {
+    text-decoration: none;
+    color: #000;
+}
+
+.home-estimates a:hover, .home-estimates a:focus {
+    text-decoration: underline;
+}
+
+.hamburgermenu {
+    grid-area: hamburger;
+    color: #FFFFFF;
+    font-size: 1.4rem;
+}
+
+.home-hero {
+    grid-area: hero;
+    color: #FFFFFF;
+}
+
+.home-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1em;
+    line-height: 1.1;
+}
+
+.home-hero p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.home-spartan {
+    display: grid;
+    place-items: center;
+    grid-area: spartan;
+    height: 350px;
+    width: 100%;
+    background: #FFFFFF;
+    padding: 50px 50px 50px 100px;
+    text-align: center;
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.home-spartan p {
+    font-size: 1.25rem;
+}
+
+.home-spartan-icon {
+    height: 60px;
+    width: 60px;
+}
+
+.home-badges {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: badges;
+    color: #FFFFFF;
+    background: #7A90B5;
+    height: 180px;
+    width: 100%;
+    padding-left: 80px;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+    text-align: center;
+}
+
+.home-badges img {
+    height: 80px;
+    width: 80px;
+}
+
+.home-products {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: products;
+    color: #FFFFFF;
+    background: #FFFFFF;
+    height: 150px;
+    width: 100%;
+    padding-left: 80px;
+    margin-right: -200px;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+    text-align: center;
+}
+
+.home-products div {
+    display: grid;
+    place-items: center;
+    width: 90px;
+    height: 90px;
+    background: rgba(82, 100, 124, 0.8);
+    margin-right: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 12px;
+    padding: 8px;
+    margin-left: -30px;
+}
+
+@media (max-width: 1000px) {
+    .home-container-1 {
+        grid-template-areas: "logo logo logo . . . . . hamburger" ". hero hero hero hero hero hero hero ." "badges badges badges badges badges badges badges badges badges";
+        grid-template-rows: 200px 300px 300px;
+    }
+    .home-header-logo {
+        margin-left: 30px;
+    }
+    .home-nav-main {
+        display: none;
+    }
+    .home-estimates {
+        display: none;
+    }
+    .home-phone {
+        display: none;
+    }
+    .home-spartan {
+        display: none;
+    }
+    .home-hero {
+        grid-area: hero;
+        text-align: center;
+    }
+    .home-badges {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        padding: 0;
+    }
+    .home-products {
+        display: none;
+    }
+}
