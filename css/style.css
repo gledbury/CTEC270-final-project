@@ -116,7 +116,7 @@ body {
 
 .home-estimates {
     grid-area: estimates;
-    color: #000;
+    color: #7a90b5;
     background: #FFFFFF;
     padding: 8px 15px 8px 15px;
     border-top-right-radius: 8px;
@@ -127,7 +127,7 @@ body {
 
 .home-estimates a:link, .home-estimates a:visited, .home-estimates a:active {
     text-decoration: none;
-    color: #000;
+    color: #7a90b5;
 }
 
 .home-estimates a:hover, .home-estimates a:focus {
@@ -226,7 +226,158 @@ body {
     margin-left: -30px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 576px) {
+    .home-container-1 {
+        margin: 0 auto;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: 10vh 40vh 5vh 10vh 35vh; */
+        grid-template-rows: 100px auto auto auto auto;
+        grid-template-areas: "logo logo hamburger" "hero hero hero" ". estimates ." ". phone ." "badges badges badges";
+    }
+    .home-header-logo {
+        text-align: left;
+        padding-left: 30px;
+    }
+    .home-nav-main {
+        display: none;
+    }
+    .hamburgermenu {
+        font-size: 2rem;
+    }
+    .home-spartan {
+        display: none;
+    }
+    .home-hero {
+        /* grid-area: hero; */
+        text-align: center;
+    }
+    .home-hero h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        padding: 20px;
+    }
+    .home-estimates {
+        color: #7a90b5;
+        font-weight: 700;
+        letter-spacing: .3em;
+    }
+    .home-phone {
+        font-size: 1.2rem;
+    }
+    .home-badges {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        padding: 0;
+        /* height: 150px; */
+    }
+    .home-products {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-container-1 {
+        margin: 0 auto;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: 10vh 40vh 10vh 10vh 150px; */
+        grid-template-areas: "logo logo hamburger" "hero hero hero" ". estimates ." ". phone ." "badges badges badges";
+    }
+    .home-header-logo {
+        text-align: left;
+        padding-left: 30px;
+    }
+    .home-nav-main {
+        display: none;
+    }
+    .hamburgermenu {
+        font-size: 2.5rem;
+    }
+    .home-spartan {
+        display: none;
+    }
+    .home-hero {
+        /* grid-area: hero; */
+        text-align: center;
+    }
+    .home-hero h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        padding: 20px;
+    }
+    .home-hero p {
+        padding: 10px;
+        text-align: center;
+    }
+    .home-estimates {
+        color: #7a90b5;
+        letter-spacing: .3em;
+    }
+    .home-phone {
+        font-size: 1.2rem;
+        padding-bottom: 50px;
+    }
+    .home-badges {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        padding: 0;
+        /* height: 150px; */
+    }
+    .home-products {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .home-header-logo {
+        width: 100%;
+        text-align: center;
+        padding-left: 30px;
+    }
+    .home-header-logo h1 {
+        display: inline;
+    }
+    .hamburgermenu {
+        font-size: 2.5rem;
+    }
+    .home-spartan {
+        clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .home-hero {
+        /* grid-area: hero; */
+        text-align: center;
+    }
+    .home-hero h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        padding: 20px;
+    }
+    .home-hero p {
+        padding: 10px;
+        text-align: center;
+    }
+    .home-estimates {
+        color: #7a90b5;
+        letter-spacing: .3em;
+    }
+    .home-phone {
+        font-size: 1.2rem;
+        padding-bottom: 50px;
+    }
+    .home-badges {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        padding: 0;
+        /* height: 150px; */
+    }
+    .home-products {
+        display: none;
+    }
+}
+
+/* @media (max-width: 992px) {
     .home-container-1 {
         grid-template-areas: "logo logo logo . . . . . hamburger" ". hero hero hero hero hero hero hero ." "badges badges badges badges badges badges badges badges badges";
         grid-template-rows: 200px 300px 300px;
@@ -257,4 +408,4 @@ body {
     .home-products {
         display: none;
     }
-}
+} */
