@@ -264,8 +264,10 @@ body {
         align-items: center;
         grid-template-columns: repeat(3, 1fr);
         /* grid-template-rows: 10vh 40vh 5vh 10vh 35vh; */
-        grid-template-rows: 100px auto auto auto auto auto auto;
-        grid-template-areas: "logo logo hamburger" "hero hero hero" ". estimates ." ". phone ." "badges badges badges" ". arm-icon ." "hero2 hero2 hero2";
+        /* grid-template-rows: 100px auto auto auto auto auto auto; */
+        grid-template-rows: 100px auto auto auto 300px;
+        grid-template-areas: "logo logo hamburger" "hero hero hero" "estimates estimates estimates" "phone phone phone" "badges badges badges";
+        /*"arm-icon arm-icon arm-icon" "hero2 hero2 hero2";*/
     }
     .home-header-logo {
         text-align: left;
@@ -306,35 +308,104 @@ body {
         display: none;
     }
     .container2 {
-        padding-top: 50px;
-        background-color: #FFFFFF;
+        padding-top: 20px;
         margin: 0 auto;
         height: 100vh;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
-        grid-template-rows: 150px auto;
-        grid-template-areas: ". arm ." "hero2 hero2 hero2";
+        grid-template-rows: 100px 80px 2px auto;
+        grid-template-areas: ". arm ." "tagline tagline tagline" ". undertag ." "content content content";
+    }
+    .overlay {
+        display: none;
     }
     .arm {
         grid-area: arm;
         border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        background-color: #7A90B5;
+        width: 80px;
+        height: 80px;
+        margin: auto;
+        /* background-color: #7A90B5; */
+        background-color: rgba(82, 100, 124, 0.8);
     }
     .arm-icon {
-        padding: 20px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        padding: 15px;
+        /* display: inline-block; */
+        /* text-align: center; */
+        /* margin-left: auto;
+        margin-right: auto; */
     }
-    .hero2 {
-        grid-area: hero2;
+    .tagline {
+        grid-area: tagline;
         background-color: #FFFFFF;
+        font-size: 1rem;
+        text-align: center;
+        color: #7A90B5;
+        font-weight: 700;
+        letter-spacing: -2px;
+        margin-bottom: 10px;
     }
-    .hero2 h1 {
-        display: inline-block;
+    .undertag {
+        grid-area: undertag;
+        margin: auto;
+        border: 2px solid #7A90B5;
+        /* background-color: #FFFFFF; */
+        width: 40%;
+    }
+    .content {
+        grid-area: content;
+        padding: 40px;
+        background-color: #FFFFFF;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        letter-spacing: 1.25px;
+        background-color: #F7F7F7;
+        /* text-align: center; */
+    }
+    .container3 {
+        padding-top: 50px;
+        margin: 0 auto;
+        height: 100vh;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 200px auto 100px;
+        grid-template-areas: "square-logo free-estimates" "container3-form container3-form " "send-request send-request";
+    }
+    .square-logo {
+        margin: auto;
+    }
+    .square-logo img {
+        height: 100px;
+        width: 100px;
+    }
+    .free-estimates {
+        margin: auto;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #7A90B5;
+    }
+    .container3-form {
+        grid-area: container3-form;
+        width: 100%;
+    }
+    .form-group {
+        grid-area: container3-form;
+        padding-left: 20px;
+        background-color: #F7F7F7;
+        width: 100%;
+    }
+    .send-request {
+        grid-area: send-request;
+        width: 100%;
+        background-color: #7A90B5;
+        border-radius: 10%;
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .send-request p {
+        margin: auto;
     }
 }
 
